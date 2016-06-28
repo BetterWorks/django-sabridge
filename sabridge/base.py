@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine, MetaData, Table
 
-# TODO support mutliple DBs via db.connections
+# TODO support multiple DBs via db.connections
 class Bridge(object):
     def __init__(self):
         # prep the attributes, allowing them to be lazily loaded
@@ -34,7 +34,7 @@ class Bridge(object):
         Use dict-notation to obtain the ``Table``::
         
             >>> from myapp.models import mymodel
-            >>> brige = Bridge()
+            >>> bridge = Bridge()
             >>> mytable = bridge[mymodel]
             >>> print type(mytable)
             <class 'sqlalchemy.schema.Table'>
